@@ -258,6 +258,10 @@ h1,
 	font-size: 3rem;
 }
 
+.entry-title {
+    font-size: 1.5rem;
+}
+
 blockquote::before {
 	font-size: 32px;
 	font-size: 2rem;
@@ -650,11 +654,18 @@ blockquote::before {
 
 .post-info,
 .post-meta {
-	clear: both;
 	line-height: 1.5;
 }
 
+.post-meta {
+    /*float: left;*/
+    /*max-width: 50%;*/
+    clear: both;
+}
+
 .post-info {
+    /*display: inline-block;*/
+    /*float: right;*/
 	margin-bottom: 32px;
 	margin-bottom: 2rem;
 }
@@ -675,6 +686,18 @@ blockquote::before {
 .categories,
 .tags {
 	display: block;
+    text-indent: -7em;
+    padding-left: 7em;
+}
+
+.categories a,
+.tags a {
+    text-decoration: underline;
+    margin-left: .5em;
+}
+
+.tags {
+    margin-top: 1em;
 }
 
 /* 03f - Column Classes ----------- */
@@ -1102,6 +1125,11 @@ h6,
 .widget-headline {
 	padding: 0 8px;
 	padding: 0 0.5rem;
+}
+
+.post .attachment-thumbnail {
+    float: left;
+    margin: 0 1em 1em 0;
 }
 
 
