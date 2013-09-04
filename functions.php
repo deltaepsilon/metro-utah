@@ -155,3 +155,60 @@ genesis_register_sidebar( array(
 	'name'			=> __( 'After Post', 'metro' ),
 	'description'	=> __( 'This is the after post section.', 'metro' ),
 ) );
+
+/**
+ * Utah Sweet Savings edits by Chris Esplin
+ */
+
+/**
+ * Adding thumbnail to genesis_post_title
+ */
+//remove_action( 'genesis_post_title', 'genesis_do_post_title' );
+//add_action( 'genesis_post_title', 'uss_do_post_title' );
+add_action('genesis_before_post_title', 'uss_do_before_post_title');
+function uss_do_before_post_title() {
+    if (!is_singular()) {
+        echo the_post_thumbnail( 'thumbnail' );
+    }
+
+}
+
+/**
+ * Removing post content for the main page.
+ */
+remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
+remove_action( 'genesis_post_content', 'genesis_do_post_content' );
+add_action( 'genesis_entry_content', 'uss_do_post_content' );
+add_action( 'genesis_post_content', 'uss_do_post_content' );
+
+function uss_do_post_content() {
+    if ( is_singular() || 'hide' !== genesis_get_option( 'content_archive' )) {
+        genesis_do_post_content();
+    }
+
+}
+
+/**
+ * Removing comments
+ */
+remove_shortcode( 'post_comments', 'genesis_post_comments_shortcode' );
+add_shortcode( 'post_comments', 'uss_post_comments_shortcode' );
+function uss_post_comments_shortcode() {
+    if (is_singular()) {
+        genesis_post_comments_shortcode(array());
+    }
+}
+
+/**
+ * Removing dates on main page
+ */
+remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+remove_action( 'genesis_before_post_content', 'genesis_post_info' );
+add_action( 'genesis_entry_header', 'uss_post_info', 12 );
+add_action( 'genesis_before_post_content', 'uss_post_info' );
+function uss_post_info() {
+    if (is_singular()) {
+        genesis_post_info();
+    }
+
+}
