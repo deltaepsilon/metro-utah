@@ -1,263 +1,4 @@
-//************************************    Color
-$yellow: #FFE48A;
-$orange: #F36C21;
-$green: #00A98E;
-$blue: #00416A;
-$gray: #231F20;
-
-$white: #FFFFFF;
-$black: #000000;
-
-$metro-gray: #333333;
-
-
-//************************************    Spritesheet
-$spritesheet: url('/wp-content/themes/metro-utah/images/spritesheet.png');
-
-@mixin spritesheet {
-  background-image: $spritesheet;
-  background-size: 700px 500px;
-}
-
-@mixin header-logo {
-  @include spritesheet;
-  background-position: -113px -25px;
-  width: 479px;
-  height: 83px;
-}
-
-@mixin favicon {
-  @include spritesheet;
-  background-position: -15px -158px;
-  width: 52px;
-  height: 45px;
-}
-
-@mixin bee {
-  @include spritesheet;
-  background-position: -71px -166px;
-  width: 35px;
-  height: 27px;
-}
-
-@mixin bee-tracks {
-  @include spritesheet;
-  background-position: -219px -169px;
-  width: 107px;
-  height: 87px;
-}
-
-@mixin badge {
-  @include spritesheet;
-  background-position: -9px -224px;
-  width: 192px;
-  height: 166px;
-}
-
-@mixin hex-yellow {
-  @include spritesheet;
-  background-position: -9px -466px;
-  width: 33px;
-  height: 29px;
-}
-
-@mixin hex-orange {
-  @include spritesheet;
-  background-position: -61px -466px;
-  width: 33px;
-  height: 29px;
-}
-
-@mixin hex-green {
-  @include spritesheet;
-  background-position: -112px -466px;
-  width: 33px;
-  height: 29px;
-}
-
-@mixin hex-blue {
-  @include spritesheet;
-  background-position: -163px -466px;
-  width: 33px;
-  height: 29px;
-}
-
-@mixin hex-gray {
-  @include spritesheet;
-  background-position: -215px -466px;
-  width: 33px;
-  height: 29px;
-}
-
-@mixin social-mail-blue {
-  @include spritesheet;
-  background-position: -425px -178px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-mail {
-  @include spritesheet;
-  background-position:  -434px -226px;
-  width: 19px;
-  height: 14px;
-}
-
-@mixin social-mail-green {
-  @include spritesheet;
-  background-position: -425px -252px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-mail-orange {
-  @include spritesheet;
-  background-position: -425px -291px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-facebook-blue {
-  @include spritesheet;
-  background-position: -465px -178px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-facebook {
-  @include spritesheet;
-  background-position:  -479px -224px;
-  width: 9px;
-  height: 18px;
-}
-
-@mixin social-facebook-green {
-  @include spritesheet;
-  background-position: -465px -252px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-facebook-orange {
-  @include spritesheet;
-  background-position: -465px -291px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-twitter-blue {
-  @include spritesheet;
-  background-position: -505px -178px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-twitter {
-  @include spritesheet;
-  background-position:  -517px -224px;
-  width: 13px;
-  height: 18px;
-}
-
-@mixin social-twitter-green {
-  @include spritesheet;
-  background-position: -505px -252px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-twitter-orange {
-  @include spritesheet;
-  background-position: -505px -291px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-rss-blue {
-  @include spritesheet;
-  background-position: -545px -178px;
-  width: 37px;
-  height: 33px;
-}
-
-@mixin social-rss {
-  @include spritesheet;
-  background-position:  -555px -224px;
-  width: 16px;
-  height: 16px;
-}
-
-@mixin social-rss-green {
-  @include spritesheet;
-  background-position: -545px -252px;
-  width: 37px;
-  height: 33px;
-}
-
-@mixin social-rss-orange {
-  @include spritesheet;
-  background-position: -545px -291px;
-  width: 37px;
-  height: 33px;
-}
-
-@mixin social-pinterest-blue {
-  @include spritesheet;
-  background-position: -584px -178px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-pinterest {
-  @include spritesheet;
-  background-position:  -596px -224px;
-  width: 14px;
-  height: 19px;
-}
-
-@mixin social-pinterest-green {
-  @include spritesheet;
-  background-position: -584px -252px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-pinterest-orange {
-  @include spritesheet;
-  background-position: -584px -291px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-google-blue {
-  @include spritesheet;
-  background-position: -624px -178px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-google {
-  @include spritesheet;
-  background-position:  -633px -224px;
-  width: 20px;
-  height: 19px;
-}
-
-@mixin social-google-green {
-  @include spritesheet;
-  background-position: -624px -252px;
-  width: 38px;
-  height: 33px;
-}
-
-@mixin social-google-orange {
-  @include spritesheet;
-  background-position: -624px -291px;
-  width: 38px;
-  height: 33px;
-}
-
-
+@import "_imports";
 
 //***************************************   Styles
 #title {
@@ -321,6 +62,10 @@ $spritesheet: url('/wp-content/themes/metro-utah/images/spritesheet.png');
 }
 
 // Social
+#social {
+  margin-top: 86px;
+}
+
 @mixin social-button {
   display: inline-block;
 }
@@ -347,4 +92,34 @@ $spritesheet: url('/wp-content/themes/metro-utah/images/spritesheet.png');
 .social-google {
   @include social-button;
   @include social-google-green;
+}
+
+
+// Ads, including Top Nav Banner
+.subnav-left {
+  padding: 0;
+  height: 66px;
+}
+.subnav-left.widget-area {
+  width: 100%;
+
+  .widget {
+    .textwidget {
+      div {
+        margin: auto;
+      }
+    }
+  }
+}
+.textwidget {
+  text-align: center;
+
+  object, iframe {
+    display: block;
+    margin: auto;
+  }
+
+  #embed-widget {
+    display: inline-block;
+  }
 }

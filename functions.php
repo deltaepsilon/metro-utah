@@ -161,6 +161,16 @@ genesis_register_sidebar( array(
  */
 
 /**
+ * Removing footer crap. Why do they do this? So tacky.
+ */
+add_filter('genesis_footer_creds_text', 'uss_footer_creds_filter');
+function uss_footer_creds_filter() {
+    $year = date("Y");
+    return "Copyright &#9400; $year &#x000B7; Utah Sweet Savings";
+}
+
+
+/**
  * Displaying expiration custom data
  */
 add_action('genesis_before_post_title', 'uss_expiration_button');

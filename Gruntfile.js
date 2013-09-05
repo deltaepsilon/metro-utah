@@ -9,13 +9,14 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
+          'style/metro.css': 'style/metro.scss',
           'style/utah.css': 'style/utah.scss'
         }
       }
     },
     concat: {
       dist: {
-        src: ['style/style.css', 'style/utah.css'],
+        src: ['style/metro.css', 'style/utah.css'],
         dest: 'style.css'
       }
     },
