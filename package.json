@@ -1,0 +1,31 @@
+{
+  "name": "metro-utah",
+  "version": "0.1.0",
+  "description": "A modification of the Genesis Metro theme for Utah Sweet Savings.",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deltaepsilon/metro-utah.git"
+  },
+  "keywords": [
+    "wp",
+    "wordpress",
+    "genesis",
+    "metro"
+  ],
+  "author": "Christopher Esplin <chris@quiver.is> (http://christopheresplin.com/)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/deltaepsilon/metro-utah/issues"
+  }
+}

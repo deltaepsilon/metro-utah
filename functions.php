@@ -161,6 +161,44 @@ genesis_register_sidebar( array(
  */
 
 /**
+ * Displaying expiration custom data
+ */
+add_action('genesis_before_post_title', 'uss_expiration_button');
+function uss_expiration_button() {
+    $post = get_post();
+    $mykey_values = get_post_custom_values("expires", $post->ID);
+    if ($mykey_values){
+        $strdate = strtotime($mykey_values[0]);
+        $trueExp = strtotime($mykey_values[0] . " +1 day");
+        $trueCor = strtotime(date("M d, Y H:i:s") . " -6 hours");
+
+        $class = null;
+        if ($trueCor > $trueExp) {
+            $class = "expired";
+            $expires = 'expired';
+        } else {
+            $expires = "Expires<br/>".date("M d, Y", $strdate);
+        }
+        echo "<div class='expires-button $class'>$expires</div>";
+    }
+
+}
+
+/**
+ * Removing categories and tags from main page
+ */
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
+add_action( 'genesis_entry_footer', 'uss_post_meta' );
+add_action( 'genesis_after_post_content', 'uss_post_meta' );
+function uss_post_meta() {
+    if (is_singular()) {
+        genesis_post_meta();
+    }
+}
+
+
+/**
  * Adding thumbnail to genesis_post_title
  */
 //remove_action( 'genesis_post_title', 'genesis_do_post_title' );
