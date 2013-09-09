@@ -9,7 +9,7 @@
   background-color: transparent;
 }
 
-.expires-button {
+.expires-button, .sidebar-button, .sidebar-button:visited, .sidebar-button:hover {
   background-color: #00a98e;
   color: white;
   padding: 0.3rem 0.8rem;
@@ -26,10 +26,12 @@
 }
 
 .entry-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .entry-title a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  max-width: 575px;
+  display: block;
 }
 
 .post .attachment-thumbnail {
@@ -135,4 +137,62 @@
 }
 .textwidget #embed-widget {
   display: inline-block;
+}
+
+.sidebar-button, .sidebar-button:visited, .sidebar-button:hover {
+  background-color: #00a98e;
+  display: block;
+  color: white;
+  font-family: 'Oswald', 'sans-serif';
+  font-size: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.post {
+  clear: both;
+}
+
+.sticky + .post {
+  border-top: 1px solid #00416a;
+  padding-top: 2rem;
+  position: relative;
+  top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sticky {
+  background-color: transparent;
+  border: none !important;
+  box-sizing: border-box;
+  clear: none;
+  height: 8rem;
+  padding: 1rem !important;
+  position: initial !important;
+  margin: 0 !important;
+  width: 50%;
+}
+.sticky.even {
+  clear: left;
+  float: left;
+}
+.sticky.odd {
+  clear: right;
+  float: right;
+}
+.sticky .entry-title a {
+  max-width: 475px;
+  max-height: 90px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.sticky .expires-button, .sticky .sidebar-button {
+  display: none;
+}
+
+body {
+  background-image: url("/wp-content/themes/metro-utah/images/bee-repeat.png");
+  background-size: 34%;
 }

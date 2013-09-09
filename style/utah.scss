@@ -27,10 +27,13 @@
   background-color: $orange !important;
 }
 
+$entry-title-font-size: 1.2rem;
 .entry-title {
-  font-size: 1.5rem;
+  font-size: $entry-title-font-size;
   a {
-    font-size: 1.5rem;
+    font-size: $entry-title-font-size;
+    max-width: 575px;
+    display: block;
   }
 }
 
@@ -122,4 +125,70 @@
   #embed-widget {
     display: inline-block;
   }
+}
+
+.sidebar-button, .sidebar-button:visited, .sidebar-button:hover {
+  @extend .expires-button;
+  background-color: $green;
+  display: block;
+  color: $white;
+  font-family: 'Oswald', 'sans-serif';
+  font-size: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+// Sitcky Posts
+.post {
+  clear: both;
+
+}
+
+.sticky + .post {
+  border-top: 1px solid $blue;
+  padding-top: 2rem;
+  position: relative;
+  top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sticky {
+  background-color: transparent;
+  border: none !important;
+  box-sizing: border-box;
+  clear: none;
+  height: 8rem;
+  padding: 1rem !important;
+  position: initial !important;
+  margin: 0 !important;
+  width: 50%;
+
+  &.even {
+    clear: left;
+    float: left;
+  }
+
+  &.odd {
+    clear: right;
+    float: right;
+  }
+
+  .entry-title a {
+    max-width: 475px;
+    max-height: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .expires-button {
+    display: none;
+  }
+}
+
+// Background
+body {
+  background-image: $bees;
+  background-size: 34%;
 }

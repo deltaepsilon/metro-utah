@@ -412,7 +412,7 @@ span.uppercase,
 #wrap {
   background-color: #fff;
   margin: 32px auto;
-  margin: 2rem auto;
+  margin: 1rem auto;
   max-width: 1080px;
   overflow: hidden;
 }
@@ -424,7 +424,7 @@ span.uppercase,
 #wrap {
   clear: both;
   padding: 36px;
-  padding: 2.25rem;
+  padding: 0rem;
 }
 
 #inner {
@@ -580,7 +580,8 @@ span.uppercase,
 
 .entry,
 .page .post.entry {
-  background: url(images/lines.png) bottom repeat-x;
+  //background: url(images/lines.png) bottom repeat-x;
+  border-bottom: 1px solid $blue;
   margin-bottom: 16px;
   margin-bottom: 1rem;
   padding-bottom: 32px;
@@ -1099,7 +1100,8 @@ h6,
 .widgettitle,
 #comments h3,
 #respond h3 {
-  background: url(images/lines.png);
+  //background: url(images/lines.png);
+  background-color: $blue;
   text-align: center;
 }
 

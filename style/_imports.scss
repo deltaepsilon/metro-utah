@@ -17,6 +17,7 @@ $metro-orange: #F36C21;
 
 //************************************    Spritesheet
 $spritesheet: url('/wp-content/themes/metro-utah/images/spritesheet.png');
+$bees: url('/wp-content/themes/metro-utah/images/bee-repeat.png');
 
 @mixin spritesheet {
   background-image: $spritesheet;

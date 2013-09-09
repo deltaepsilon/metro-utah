@@ -260,3 +260,19 @@ function uss_post_info() {
     }
 
 }
+
+/**
+ * Getting evens and odds
+ */
+add_action('post_class', 'uss_even_odd');
+function uss_even_odd($classes) {
+    $flag = 'even';
+    $counter = $GLOBALS['loop_counter'];
+    if (($counter % 2) === 1) {
+        $flag = 'odd';
+    }
+    $classes[] = $flag;
+    return $classes;
+}
+
+//add_filter('post_class', 'category_id_class');
