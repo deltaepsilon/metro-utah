@@ -561,7 +561,7 @@ span.uppercase,
 /* 03d - Main Content ----------- */
 #content {
   padding: 8px 16px 12px;
-  padding: 0rem 1rem 0.75rem;
+  padding: 0rem 0rem 0.75rem;
 }
 
 .metro-home #content {

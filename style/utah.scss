@@ -4,9 +4,11 @@
 #title {
   a {
     @include header-logo;
+    background-position: -98px -25px;
     font-size: 0;
     display: block;
     background-color: transparent;
+    margin: auto;
   }
 }
 
@@ -215,12 +217,13 @@ body {
   color: $blue;
   overflow: hidden;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .banner-headline {
   display: inline-block;
   font-family: Oswald;
-  font-size: 2rem;
+  font-size: 1.2rem;
 
 }
 
@@ -245,7 +248,7 @@ body {
 @media only screen and (max-width: 768px) {
   #title {
     margin: 0 !important;
-    
+
     a {
       background-size: 560px 400px !important;
       background-position: -90px -20px;

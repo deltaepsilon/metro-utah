@@ -561,7 +561,7 @@ span.uppercase,
 /* 03d - Main Content ----------- */
 #content {
   padding: 8px 16px 12px;
-  padding: 0rem 1rem 0.75rem;
+  padding: 0rem 0rem 0.75rem;
 }
 
 .metro-home #content {
@@ -1983,9 +1983,11 @@ p.wp-caption-text {
   background-position: -113px -25px;
   width: 479px;
   height: 83px;
+  background-position: -98px -25px;
   font-size: 0;
   display: block;
   background-color: transparent;
+  margin: auto;
 }
 
 .expires-button, .sidebar-button, .sidebar-button:visited, .sidebar-button:hover {
@@ -2192,12 +2194,13 @@ body {
   color: #00416a;
   overflow: hidden;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .banner-headline {
   display: inline-block;
   font-family: Oswald;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .sticky-separator {
