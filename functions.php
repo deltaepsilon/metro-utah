@@ -275,4 +275,20 @@ function uss_even_odd($classes) {
     return $classes;
 }
 
-//add_filter('post_class', 'category_id_class');
+add_action('genesis_before_loop', 'uss_do_before_loop');
+function uss_do_before_loop() {
+    echo "<div class='banner'><span class='banner-headline'>Hot Deals</span></div>";
+}
+
+add_action('genesis_before_post', 'uss_do_before_post');
+$lagging_sticky = false;
+function uss_do_before_post() {
+    global $lagging_sticky;
+    if (is_sticky()) {
+        $lagging_sticky = true;
+    } else if ($lagging_sticky) {
+        $lagging_sticky = false;
+        echo "<div class='banner sticky-separator'><span class='banner-headline'>Latest Deals</span></div>";
+    }
+
+}

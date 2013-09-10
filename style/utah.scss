@@ -99,6 +99,9 @@ $entry-title-font-size: 1.2rem;
 
 
 // Ads, including Top Nav Banner
+#subnav {
+  background-color: transparent !important;
+}
 .subnav-left {
   padding: 0;
   height: 66px;
@@ -152,10 +155,19 @@ $entry-title-font-size: 1.2rem;
   position: relative;
   top: 1rem;
   margin-bottom: 2rem;
+
+  &:before {
+    content: "Latest Deals";
+    display: block;
+
+
+  }
 }
 
 .sticky {
-  background-color: transparent;
+  //background-color: rgba(25, 169, 144, 0.2); //green
+  //background-color: rgba(241, 107, 47, 0.5); //orange
+  background-color: rgba(254, 228, 144, 0.3); //yellow
   border: none !important;
   box-sizing: border-box;
   clear: none;
@@ -164,6 +176,10 @@ $entry-title-font-size: 1.2rem;
   position: initial !important;
   margin: 0 !important;
   width: 50%;
+
+  &:before {
+    display: none !important;
+  }
 
   &.even {
     clear: left;
@@ -191,4 +207,53 @@ $entry-title-font-size: 1.2rem;
 body {
   background-image: $bees;
   background-size: 34%;
+}
+
+// Banners
+.banner {
+  clear: both;
+  color: $blue;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.banner-headline {
+  display: inline-block;
+  font-family: Oswald;
+  font-size: 2rem;
+
+}
+
+.sticky-separator {
+  margin-bottom: 3rem;
+  position: relative;
+  top: 2rem;
+}
+
+// Media
+@media only screen and (max-width: 1024px) {
+  .searchform {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  #social {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #title {
+    margin: 0 !important;
+    
+    a {
+      background-size: 560px 400px !important;
+      background-position: -90px -20px;
+    }
+  }
+
+
+  .sticky {
+    width: 100%;
+  }
 }

@@ -561,7 +561,7 @@ span.uppercase,
 /* 03d - Main Content ----------- */
 #content {
   padding: 8px 16px 12px;
-  padding: 0.5rem 1rem 0.75rem;
+  padding: 0rem 1rem 0.75rem;
 }
 
 .metro-home #content {
@@ -1091,13 +1091,15 @@ h6,
 
 .widgettitle,
 #comments h3,
-#respond h3 {
+#respond h3,
+.banner {
   background-color: #00416a;
   text-align: center;
 }
 
 .comments-title,
-.widget-headline {
+.widget-headline,
+.banner-headline {
   background-color: #fff;
   line-height: 1;
 }
@@ -1114,7 +1116,8 @@ h6,
   padding: 0 0.75rem;
 }
 
-.widget-headline {
+.widget-headline,
+.banner-headline {
   padding: 0 8px;
   padding: 0 0.5rem;
 }

@@ -116,6 +116,10 @@
   height: 33px;
 }
 
+#subnav {
+  background-color: transparent !important;
+}
+
 .subnav-left {
   padding: 0;
   height: 66px;
@@ -162,9 +166,13 @@
   top: 1rem;
   margin-bottom: 2rem;
 }
+.sticky + .post:before {
+  content: "Latest Deals";
+  display: block;
+}
 
 .sticky {
-  background-color: transparent;
+  background-color: rgba(254, 228, 144, 0.3);
   border: none !important;
   box-sizing: border-box;
   clear: none;
@@ -173,6 +181,9 @@
   position: initial !important;
   margin: 0 !important;
   width: 50%;
+}
+.sticky:before {
+  display: none !important;
 }
 .sticky.even {
   clear: left;
@@ -195,4 +206,47 @@
 body {
   background-image: url("/wp-content/themes/metro-utah/images/bee-repeat.png");
   background-size: 34%;
+}
+
+.banner {
+  clear: both;
+  color: #00416a;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.banner-headline {
+  display: inline-block;
+  font-family: Oswald;
+  font-size: 2rem;
+}
+
+.sticky-separator {
+  margin-bottom: 3rem;
+  position: relative;
+  top: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .searchform {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  #social {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #title {
+    margin: 0 !important;
+  }
+  #title a {
+    background-size: 560px 400px !important;
+    background-position: -90px -20px;
+  }
+
+  .sticky {
+    width: 100%;
+  }
 }

@@ -561,7 +561,7 @@ span.uppercase,
 /* 03d - Main Content ----------- */
 #content {
   padding: 8px 16px 12px;
-  padding: 0.5rem 1rem 0.75rem;
+  padding: 0rem 1rem 0.75rem;
 }
 
 .metro-home #content {
@@ -1091,13 +1091,15 @@ h6,
 
 .widgettitle,
 #comments h3,
-#respond h3 {
+#respond h3,
+.banner {
   background-color: #00416a;
   text-align: center;
 }
 
 .comments-title,
-.widget-headline {
+.widget-headline,
+.banner-headline {
   background-color: #fff;
   line-height: 1;
 }
@@ -1114,7 +1116,8 @@ h6,
   padding: 0 0.75rem;
 }
 
-.widget-headline {
+.widget-headline,
+.banner-headline {
   padding: 0 8px;
   padding: 0 0.5rem;
 }
@@ -2092,6 +2095,10 @@ p.wp-caption-text {
   height: 33px;
 }
 
+#subnav {
+  background-color: transparent !important;
+}
+
 .subnav-left {
   padding: 0;
   height: 66px;
@@ -2138,9 +2145,13 @@ p.wp-caption-text {
   top: 1rem;
   margin-bottom: 2rem;
 }
+.sticky + .post:before {
+  content: "Latest Deals";
+  display: block;
+}
 
 .sticky {
-  background-color: transparent;
+  background-color: rgba(254, 228, 144, 0.3);
   border: none !important;
   box-sizing: border-box;
   clear: none;
@@ -2149,6 +2160,9 @@ p.wp-caption-text {
   position: initial !important;
   margin: 0 !important;
   width: 50%;
+}
+.sticky:before {
+  display: none !important;
 }
 .sticky.even {
   clear: left;
@@ -2171,4 +2185,47 @@ p.wp-caption-text {
 body {
   background-image: url("/wp-content/themes/metro-utah/images/bee-repeat.png");
   background-size: 34%;
+}
+
+.banner {
+  clear: both;
+  color: #00416a;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.banner-headline {
+  display: inline-block;
+  font-family: Oswald;
+  font-size: 2rem;
+}
+
+.sticky-separator {
+  margin-bottom: 3rem;
+  position: relative;
+  top: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .searchform {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  #social {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #title {
+    margin: 0 !important;
+  }
+  #title a {
+    background-size: 560px 400px !important;
+    background-position: -90px -20px;
+  }
+
+  .sticky {
+    width: 100%;
+  }
 }
