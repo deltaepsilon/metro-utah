@@ -19,7 +19,12 @@ $metro-orange: #F36C21;
 $spritesheet: url('/wp-content/themes/metro-utah/images/spritesheet.png');
 $bees: url('/wp-content/themes/metro-utah/images/bee-repeat.png');
 
+@mixin ie-background-size {
+  -ms-behavior: url('/wp-content/themes/metro-utah/backgroundsize.min.htc');
+}
+
 @mixin spritesheet {
+  @include ie-background-size;
   background-image: $spritesheet;
   background-size: 700px 500px;
 }

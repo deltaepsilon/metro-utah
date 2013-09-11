@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 	Theme Name: Metro Utah Child Theme
 	Theme URI: http://my.studiopress.com/themes/metro/
@@ -1978,6 +1977,7 @@ p.wp-caption-text {
 }
 
 #title a {
+  -ms-behavior: url("/wp-content/themes/metro-utah/backgroundsize.min.htc");
   background-image: url("/wp-content/themes/metro-utah/images/spritesheet.png");
   background-size: 700px 500px;
   background-position: -113px -25px;
@@ -2007,10 +2007,10 @@ p.wp-caption-text {
 }
 
 .entry-title {
-  font-size: 1.2rem;
+  font-size: 19px;
 }
 .entry-title a {
-  font-size: 1.2rem;
+  font-size: 19px;
   max-width: 575px;
   display: block;
 }
@@ -2045,6 +2045,7 @@ p.wp-caption-text {
 
 .social-email {
   display: inline-block;
+  -ms-behavior: url("/wp-content/themes/metro-utah/backgroundsize.min.htc");
   background-image: url("/wp-content/themes/metro-utah/images/spritesheet.png");
   background-size: 700px 500px;
   background-position: -425px -252px;
@@ -2054,6 +2055,7 @@ p.wp-caption-text {
 
 .social-facebook {
   display: inline-block;
+  -ms-behavior: url("/wp-content/themes/metro-utah/backgroundsize.min.htc");
   background-image: url("/wp-content/themes/metro-utah/images/spritesheet.png");
   background-size: 700px 500px;
   background-position: -465px -252px;
@@ -2063,6 +2065,7 @@ p.wp-caption-text {
 
 .social-twitter {
   display: inline-block;
+  -ms-behavior: url("/wp-content/themes/metro-utah/backgroundsize.min.htc");
   background-image: url("/wp-content/themes/metro-utah/images/spritesheet.png");
   background-size: 700px 500px;
   background-position: -505px -252px;
@@ -2072,6 +2075,7 @@ p.wp-caption-text {
 
 .social-rss {
   display: inline-block;
+  -ms-behavior: url("/wp-content/themes/metro-utah/backgroundsize.min.htc");
   background-image: url("/wp-content/themes/metro-utah/images/spritesheet.png");
   background-size: 700px 500px;
   background-position: -545px -252px;
@@ -2081,6 +2085,7 @@ p.wp-caption-text {
 
 .social-pinterest {
   display: inline-block;
+  -ms-behavior: url("/wp-content/themes/metro-utah/backgroundsize.min.htc");
   background-image: url("/wp-content/themes/metro-utah/images/spritesheet.png");
   background-size: 700px 500px;
   background-position: -584px -252px;
@@ -2090,6 +2095,7 @@ p.wp-caption-text {
 
 .social-google {
   display: inline-block;
+  -ms-behavior: url("/wp-content/themes/metro-utah/backgroundsize.min.htc");
   background-image: url("/wp-content/themes/metro-utah/images/spritesheet.png");
   background-size: 700px 500px;
   background-position: -624px -252px;
@@ -2201,6 +2207,7 @@ body {
 .banner-headline {
   display: inline-block;
   font-family: Oswald;
+  font-size: 19px;
   font-size: 1.2rem;
 }
 

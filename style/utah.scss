@@ -29,7 +29,7 @@
   background-color: $orange !important;
 }
 
-$entry-title-font-size: 1.2rem;
+$entry-title-font-size: 19px;
 .entry-title {
   font-size: $entry-title-font-size;
   a {
@@ -223,6 +223,7 @@ body {
 .banner-headline {
   display: inline-block;
   font-family: Oswald;
+  font-size: 19px;
   font-size: 1.2rem;
 
 }
