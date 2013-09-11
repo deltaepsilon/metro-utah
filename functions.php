@@ -277,7 +277,10 @@ function uss_even_odd($classes) {
 
 add_action('genesis_before_loop', 'uss_do_before_loop');
 function uss_do_before_loop() {
-    echo "<div class='banner'><span class='banner-headline'>Hot Deals</span></div>";
+    if (is_home()) {
+        echo "<div class='banner'><span class='banner-headline'>Hot Deals</span></div>";
+    }
+
 }
 
 add_action('genesis_before_post', 'uss_do_before_post');

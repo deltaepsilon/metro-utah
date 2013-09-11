@@ -174,9 +174,10 @@
 }
 
 .sticky {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   background-color: rgba(254, 228, 144, 0.3);
   border: none !important;
-  box-sizing: border-box;
   clear: none;
   height: 8rem;
   padding: 1rem !important;

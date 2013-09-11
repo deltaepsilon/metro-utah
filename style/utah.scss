@@ -167,11 +167,11 @@ $entry-title-font-size: 1.2rem;
 }
 
 .sticky {
+  @include box-sizing;
   //background-color: rgba(25, 169, 144, 0.2); //green
   //background-color: rgba(241, 107, 47, 0.5); //orange
   background-color: rgba(254, 228, 144, 0.3); //yellow
   border: none !important;
-  box-sizing: border-box;
   clear: none;
   height: 8rem;
   padding: 1rem !important;

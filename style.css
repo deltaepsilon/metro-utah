@@ -1067,7 +1067,6 @@ h6,
 }
 
 .archive-title {
-  background: url(images/lines.png) bottom repeat-x;
   margin-bottom: 32px;
   margin-bottom: 2rem;
   padding-bottom: 16px;
@@ -2153,9 +2152,10 @@ p.wp-caption-text {
 }
 
 .sticky {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   background-color: rgba(254, 228, 144, 0.3);
   border: none !important;
-  box-sizing: border-box;
   clear: none;
   height: 8rem;
   padding: 1rem !important;

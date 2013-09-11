@@ -261,3 +261,8 @@ $bees: url('/wp-content/themes/metro-utah/images/bee-repeat.png');
   width: 38px;
   height: 33px;
 }
+
+@mixin box-sizing {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
