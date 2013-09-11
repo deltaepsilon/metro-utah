@@ -173,7 +173,8 @@ $entry-title-font-size: 19px;
   background-color: rgba(254, 228, 144, 0.3); //yellow
   border: none !important;
   clear: none;
-  height: 8rem;
+  height: 128px;
+  padding: 16px !important;
   padding: 1rem !important;
   position: initial !important;
   margin: 0 !important;
@@ -209,6 +210,7 @@ $entry-title-font-size: 19px;
 body {
   background-image: $bees;
   background-size: 34%;
+  @include ie-background-size;
 }
 
 // Banners

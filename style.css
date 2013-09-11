@@ -2164,7 +2164,8 @@ p.wp-caption-text {
   background-color: rgba(254, 228, 144, 0.3);
   border: none !important;
   clear: none;
-  height: 8rem;
+  height: 128px;
+  padding: 16px !important;
   padding: 1rem !important;
   position: initial !important;
   margin: 0 !important;
@@ -2194,6 +2195,7 @@ p.wp-caption-text {
 body {
   background-image: url("/wp-content/themes/metro-utah/images/bee-repeat.png");
   background-size: 34%;
+  -ms-behavior: url("/wp-content/themes/metro-utah/backgroundsize.min.htc");
 }
 
 .banner {
