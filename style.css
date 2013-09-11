@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 	Theme Name: Metro Utah Child Theme
 	Theme URI: http://my.studiopress.com/themes/metro/
@@ -2177,6 +2178,7 @@ p.wp-caption-text {
   padding: 1rem !important;
   position: initial !important;
   margin: 0 !important;
+  top: 0 !important;
   width: 50%;
 }
 .sticky:before {
