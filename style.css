@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 	Theme Name: Metro Utah Child Theme
 	Theme URI: http://my.studiopress.com/themes/metro/
@@ -2248,8 +2247,9 @@ body {
     margin: 0 !important;
   }
   #title a {
-    background-size: 560px 400px !important;
-    background-position: -90px -20px;
+    background-size: 420px 300px !important;
+    background-position: -65px -15px;
+    height: 60px;
   }
 
   .sticky {
