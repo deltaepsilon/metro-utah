@@ -277,7 +277,7 @@ function uss_even_odd($classes) {
 
 add_action('genesis_before_loop', 'uss_do_before_loop');
 function uss_do_before_loop() {
-    if (is_home()) {
+    if (is_home() && !is_paged()) {
         echo "<div class='banner'><span class='banner-headline'>Hot Deals</span></div>";
     }
 
@@ -291,7 +291,10 @@ function uss_do_before_post() {
         $lagging_sticky = true;
     } else if ($lagging_sticky) {
         $lagging_sticky = false;
-        echo "<div class='banner sticky-separator'><span class='banner-headline'>Latest Deals</span></div>";
+        if (!is_paged()) {
+            echo "<div class='banner sticky-separator'><span class='banner-headline'>Latest Deals</span></div>";
+        }
+
     }
 
 }
