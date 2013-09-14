@@ -291,7 +291,7 @@ function uss_do_before_post() {
         $lagging_sticky = true;
     } else if ($lagging_sticky) {
         $lagging_sticky = false;
-        if (!is_paged()) {
+        if (is_home() && !is_paged()) {
             echo "<div class='banner sticky-separator'><span class='banner-headline'>Latest Deals</span></div>";
         }
 
