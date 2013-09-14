@@ -209,16 +209,48 @@ function uss_post_meta() {
 
 
 /**
- * Adding thumbnail to genesis_post_title
+ * Adding thumbnail to genesis_before_post_title
  */
-//remove_action( 'genesis_post_title', 'genesis_do_post_title' );
-//add_action( 'genesis_post_title', 'uss_do_post_title' );
 add_action('genesis_before_post_title', 'uss_do_before_post_title');
 function uss_do_before_post_title() {
     if (!is_singular()) {
         echo the_post_thumbnail( 'thumbnail' );
     }
 
+}
+
+/**
+ * Hacking genesis_post_title
+ */
+remove_action( 'genesis_post_title', 'genesis_do_post_title' );
+add_action( 'genesis_post_title', 'uss_do_post_title' );
+function uss_do_post_title() { // It's exactly the same except for the target="_blank"
+    $title = apply_filters( 'genesis_post_title_text', get_the_title() );
+
+    if ( 0 === mb_strlen( $title ) )
+        return;
+
+    //* Link it, if necessary
+    if ( ! is_singular() && apply_filters( 'genesis_link_post_title', true ) )
+        $title = sprintf( '<a href="%s" title="%s" rel="bookmark" target="_blank">%s</a>', get_permalink(), the_title_attribute( 'echo=0' ), $title );
+
+    //* Wrap in H1 on singular pages
+    $wrap = is_singular() ? 'h1' : 'h2';
+
+    //* Also, if HTML5 with semantic headings, wrap in H1
+    $wrap = genesis_html5() && genesis_get_seo_option( 'semantic_headings' ) ? 'h1' : $wrap;
+
+    //* Build the output
+    $output = genesis_markup( array(
+        'html5'   => "<{$wrap} %s>",
+        'xhtml'   => sprintf( '<%s class="entry-title">%s</%s>', $wrap, $title, $wrap ),
+        'context' => 'entry-title',
+        'echo'    => false,
+    ) );
+
+    $output .= genesis_html5() ? "{$title}</{$wrap}>" : '';
+
+    echo apply_filters( 'genesis_post_title_output', "$output \n" );
 }
 
 /**
@@ -257,6 +289,18 @@ add_action( 'genesis_before_post_content', 'uss_post_info' );
 function uss_post_info() {
     if (is_singular()) {
         genesis_post_info();
+    } else if (!is_sticky()) {
+        global $post;
+
+        if ( 'page' === get_post_type( $post->ID ) )
+            return;
+
+        $post_info = apply_filters( 'genesis_post_info', '[post_date] ' . __( 'by', 'genesis' ) . ' [post_author_posts_link] [post_comments] [post_edit]' );
+
+        genesis_markup( array(
+            'html5' => sprintf( '<p class="entry-meta">%s</p>', $post_info ),
+            'xhtml' => sprintf( '<div class="post-info">%s</div>', $post_info ),
+        ) );
     }
 
 }

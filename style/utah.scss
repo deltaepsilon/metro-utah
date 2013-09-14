@@ -47,6 +47,18 @@ $entry-title-font-size: 19px;
   margin: 0 1em 0em 0;
 }
 
+.post-info {
+  margin-bottom: 0;
+  display: inline-block;
+
+  //Left Float
+  //margin-left: 107px;
+  //float: left;
+
+  //Right Float
+  float: right;
+}
+
 .entry-content {
   clear: both;
 }
@@ -114,6 +126,11 @@ $entry-title-font-size: 19px;
 .subnav-left.widget-area {
   width: 100%;
 
+  .widget-wrap {
+    background-color: transparent;
+    margin: 0 35px;
+  }
+
   .widget {
     .textwidget {
       div {
@@ -151,6 +168,10 @@ $entry-title-font-size: 19px;
 }
 
 // Sitcky Posts
+#wrap {
+  margin-top: 0px;
+}
+
 .post {
   clear: both;
 
