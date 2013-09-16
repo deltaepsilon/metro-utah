@@ -2027,6 +2027,8 @@ p.wp-caption-text {
   margin-bottom: 0;
   display: inline-block;
   float: right;
+  clear: right;
+  margin-top: 5px;
 }
 
 .entry-content {
@@ -2252,8 +2254,7 @@ body {
   }
 
   #social {
-    margin-top: 16px;
-    margin-top: 1rem;
+    margin-top: 86px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -2265,6 +2266,11 @@ body {
     background-position: -65px -15px;
     height: 60px;
     width: 262px;
+  }
+
+  #social {
+    margin-top: 16px;
+    margin-top: 1rem;
   }
 
   .sticky {
