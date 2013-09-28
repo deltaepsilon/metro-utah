@@ -342,3 +342,8 @@ function uss_do_before_post() {
     }
 
 }
+
+add_action('publish_post', 'uss_do_on_publish');
+function uss_do_on_publish() {
+    include(getcwd().'/../chris/push.php');
+}
