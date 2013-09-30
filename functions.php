@@ -345,5 +345,9 @@ function uss_do_before_post() {
 
 add_action('publish_post', 'uss_do_on_publish');
 function uss_do_on_publish() {
-    include(getcwd().'/../chris/push.php');
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $_SERVER['HTTP_ORIGIN'].'/chris/push.php');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $result = curl_exec($ch);
+    curl_close($ch);
 }
